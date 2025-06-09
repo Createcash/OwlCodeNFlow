@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Offline OCR</title>
+  <!-- Load Office.js from a local copy so the add-in works offline -->
+  <script src="office.js"></script>
+  <script src="tesseract.min.js"></script>
+  <script src="taskpane.js"></script>
+</head>
+<body>
+  <h1>Offline OCR</h1>
+  <input type="file" id="imageInput" accept="image/*" />
+  <button id="extractBtn">Extract Text</button>
+  <pre id="output"></pre>
+</body>
+</html>

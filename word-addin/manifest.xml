@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+           xsi:type="TaskPaneApp">
+  <Id>12345678-1234-1234-1234-1234567890ab</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Your Company</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Offline OCR" />
+  <Description DefaultValue="Extract text from images using a local LLM." />
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png" />
+  <SupportUrl DefaultValue="https://localhost:3000/support" />
+  <AppDomains>
+    <AppDomain>https://localhost:3000</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xsi:type="VersionOverridesV1_0" xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" >
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title>Offline OCR</Title>
+            <Description>Extract text from images using a local LLM</Description>
+            <LearnMoreUrl>https://localhost:3000/learnmore</LearnMoreUrl>
+            <OfficeButton>
+              <Label>Show Task Pane</Label>
+              <Supertip>
+                <Title>Offline OCR</Title>
+                <Description>Launch the OCR tool.</Description>
+              </Supertip>
+              <Icon>
+                <bt:Image size="16" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0">https://localhost:3000/assets/icon-16.png</bt:Image>
+              </Icon>
+            </OfficeButton>
+          </GetStarted>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+  </VersionOverrides>
+</OfficeApp>
